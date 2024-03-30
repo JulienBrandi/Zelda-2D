@@ -2,19 +2,19 @@ package org.example;
 
 import javax.swing.*;
 
-public class Controleur {
+public class Controller {
 
     private final JFrame window;
 
-    public Controleur(){
+    public Controller(){
         this.window = new JFrame();
         this.window.setTitle("Zelda 2D");
         this.window.setSize(1920, 1080);
         this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public static void startApp(){
-
+    public void startApp(){
+        this.window.setVisible(true);
     }
 
 }
