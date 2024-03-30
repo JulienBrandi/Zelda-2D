@@ -18,15 +18,11 @@ public class Controller {
     public void startApp(){
         this.window.setVisible(true);
         JButton button = new JButton("Start game!");
-        button.addActionListener(e -> {
-            this.startGame();
-        });
+        button.addActionListener(e -> this.startGame());
         button.setSize(100,50);
         button.setLocation((int)Math.round(x*0.40), (int)Math.round(y*0.60));
         JButton button2 = new JButton("Exit game!");
-        button2.addActionListener(e -> {
-            this.closeGame();
-        });
+        button2.addActionListener(e -> this.closeGame());
         button2.setSize(100,50);
         button2.setLocation((int)Math.round(x*0.57),(int)Math.round(y*0.60));
         this.window.add(button);
