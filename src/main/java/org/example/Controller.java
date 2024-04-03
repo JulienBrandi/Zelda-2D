@@ -1,12 +1,16 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
+//import java.awt.event.KeyListener;
 
 public class Controller {
 
     private final JFrame window;
     private final double x = 1920;
     private final double y = 1080;
+
+   // public Point playerPosition;
 
     public Controller(){
         this.window = new JFrame();
@@ -27,6 +31,7 @@ public class Controller {
         button2.setLocation((int)Math.round(x*0.57),(int)Math.round(y*0.60));
         this.window.add(button);
         this.window.add(button2);
+        this.window.addKeyListener(new ControlKey(new Object(), window));
     }
 
     public void closeGame(){
@@ -34,6 +39,18 @@ public class Controller {
         System.exit(0);
     }
     public void startGame(){
+        Container contentPane = this.window.getContentPane();
 
+        contentPane.removeAll();
+
+        // Add new content here (if any)
+
+        // Revalidate and repaint the window
+        contentPane.revalidate();
+        contentPane.repaint();
+        System.out.print("Casse les couilles");
     }
+
+
+
 }
